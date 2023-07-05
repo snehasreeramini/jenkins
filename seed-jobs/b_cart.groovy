@@ -1,4 +1,4 @@
-freeStyleJob('CI-Pipelines/cart') {
+freeStyleJob('CI-Pipelines/b_cart') {
     scm {
         github('jenkinsci/job-dsl-plugin', 'master')
     }
