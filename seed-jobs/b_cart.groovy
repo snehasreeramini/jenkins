@@ -2,7 +2,7 @@ multibranchPipelineJob('CI-Pipelines/b_cart') {
     branchSources {
         git {
             id('123456789') // IMPORTANT: use a constant and unique identifier
-            repository('https://github.com/snehasreeramin/cart')
+            repository('snehasreeramini/cart')
             scanCredentialsId('Github')
         }
     }
