@@ -5,4 +5,5 @@ freeStyleJob('CI-Pipelines/cart') {
     steps {
         gradle('clean build')
     }
+
 }
