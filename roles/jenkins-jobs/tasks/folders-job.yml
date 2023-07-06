@@ -1,0 +1,17 @@
+- name: Check if dir exists
+  shell: "{{JENKINS_CLI_PREFIX}} get-job {{item.name}}"
+  ignore_errors: true
+  register: check_dir
+
+- name: Update Job Templete
+  templete:
+  src: folders-job.xml
+  dest: /tmp/job.xml
+
+- name: Create a directory
+  when: check_dir.rc == 3
+  shell: "cat /tmp/job.cml |{{JENKINS_CLI_PREFIX}} create-job {{item.name}}"
+
+- name: Update Directory
+  when: check_dir.rc == 0
+    shell: "cat /tmp/job.cml |{{JENKINS_CLI_PREFIX}} Update-job {{item.name}}"
