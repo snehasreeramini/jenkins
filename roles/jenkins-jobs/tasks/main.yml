@@ -8,7 +8,4 @@
 
 - name: Create Jenkins Multi Branch Pipelines
   include_tasks: mb-job.yml
-  loop:
-    - {name: "sample1", repoName: "sample1",dirName: "CI-Pipelines/"}
-    - {name: "catalogue",repoName: "catalogue", dirName: "CI-Pipelines/"}
-    - {name: "user",repoName: "user", dirName: "CI-Pipelines/"}
+  loop: "{{MB_JOBS}}"
