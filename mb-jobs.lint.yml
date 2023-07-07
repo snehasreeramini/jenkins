@@ -2,3 +2,6 @@ MB_JOBS:
   - {name: "sample1", repoName: "sample1",dirName: "CI-Pipelines/"}
    - {name: "catalogue",repoName: "catalogue", dirName: "CI-Pipelines/"}
    - {name: "user",repoName: "user", dirName: "CI-Pipelines/"}
+   - {name: "shipping",repoName: "shipping", dirName: "CI-Pipelines/"}
+   - {name: "payment",repoName: "payment", dirName: "CI-Pipelines/"}
+   - {name: "frontend",repoName: "frontend", dirName: "CI-Pipelines/"}
